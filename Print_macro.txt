@@ -1,6 +1,17 @@
-Sub Print_macro(
-	Sheet("").PrintOut Preview:=True
-)
+Sub Print()
+ 
+    Dim Sht As Variant
+     
+    'ブックの全シートに対する処理
+    For Each Sht In Worksheets
+       'シート名を取得し、特定シート名以外は印刷を実行
+       Select Case Sht.Name
+           Case Is <> "改定履歴"
+              Sht.PrintOut Preview:=True
+       End Select
+    Next
+     
+    '**シート毎に判定し印刷を実行していく形になる
+    'プリントスプールが別々になるので、共有プリンタでは混ざってしまう可能性あり
+    'プレビューは必要 
 End Sub
-
-#プレビューは必要
