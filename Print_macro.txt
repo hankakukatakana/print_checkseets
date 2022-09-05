@@ -1,0 +1,4 @@
+Sub Print_macro(
+	Sheet("").PrintOut Preview:=True
+)
+End Sub
