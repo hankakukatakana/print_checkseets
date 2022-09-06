@@ -3,8 +3,7 @@ $excel.Visible = $false
 $book = $excel.Workbooks.Open("C:\...\Book1.xlsx")
 $sheet = $excel.Worksheets.Item("Sheet1")
  
-#開始ページと終了ページ、部数を指定して印刷
-#開始・終了ページを指定しないと全シートが印刷されてしまう
+#開始ページと終了ページ、部数を指定して印刷（シートを選択する方法が不明）
 $From = 1 #開始ページ
 $To = 1 #終了ページ
 $Copies = 1 #部数
