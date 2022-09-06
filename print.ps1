@@ -1,7 +1,7 @@
 $excel = New-Object -ComObject Excel.Application
 $excel.Visible = $false
 $book = $excel.Workbooks.Open("C:\...\Book1.xlsx")
-$sheet = $excel.Worksheets.Item("Sheet1")
+$sheet = $excel.Worksheets.Item(1,2,3).Select
  
 #開始ページと終了ページ、部数を指定して印刷（シートを選択する方法が不明）
 $From = 1 #開始ページ
